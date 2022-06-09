@@ -1,11 +1,13 @@
 package main
 
 import (
+	"gin-rest-alura/database"
 	"gin-rest-alura/models"
 	"gin-rest-alura/routes"
 )
 
 func main() {
+	database.ConnectWithDB()
 	models.Alunos = []models.Aluno{
 		{
 			Nome: "Lucas Mezencio",
