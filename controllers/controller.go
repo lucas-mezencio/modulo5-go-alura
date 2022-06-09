@@ -8,7 +8,9 @@ import (
 )
 
 func ShowAllStudents(c *gin.Context) {
-	c.JSON(http.StatusOK, models.Alunos)
+	var alunos []models.Aluno
+	database.DB.Find(&alunos)
+	c.JSON(http.StatusOK, alunos)
 }
 
 func Greeting(c *gin.Context) {
