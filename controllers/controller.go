@@ -11,3 +11,10 @@ func ShowAllStudents(c *gin.Context) {
 		"nome": "Lucas Mezencio",
 	})
 }
+
+func Saudacao(c *gin.Context) {
+	nome := c.Params.ByName("nome")
+	c.JSON(http.StatusOK, gin.H{
+		"API diz: ": "Ola " + nome,
+	})
+}

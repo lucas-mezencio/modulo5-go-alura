@@ -1,5 +1,7 @@
 package main
 
-func main() {
+import "gin-rest-alura/routes"
 
+func main() {
+	routes.HandleRequests()
 }
